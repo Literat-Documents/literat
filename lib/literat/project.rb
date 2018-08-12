@@ -39,6 +39,10 @@ class Project < Hash
   end
 
   def open
+    if !self.project_exists?
+      puts "project not initialized" # TODO: add logging/error lib for this shit
+      exit
+    end
     YAML.load_file(project_file).each do |k,v|
       self[k] = v 
     end
