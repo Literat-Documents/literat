@@ -5,6 +5,10 @@ require 'literat/compiler'
 require 'literat/template_manager'
 require 'colorize'
 
+
+TemplateManager.new.ensure_is_initialized
+
+
 Literat = Cri::Command.define do
   name        'literat'
   usage       'literat [command] [options]'

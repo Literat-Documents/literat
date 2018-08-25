@@ -1,0 +1,20 @@
+\documentclass[a4paper,openright, 12pt]{article}
+
+\usepackage{hyperref}
+
+\makeatletter
+\renewcommand{\@seccntformat}[1]{}
+\makeatother
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{10pt}
+\title{<%= settings['title']%>}
+\author{<%= settings['author']['name']%> <%= settings['author']['lastname']%>  \\
+	<%= settings['author']['org']%>  \\
+	<%= settings['author']['street']%> <%= settings['author']['number']%> \\
+	<%= settings['author']['postal']%> <%= settings['author']['city']%>
+	}
+
+\begin{document}
+	\maketitle
+    <%= md_to_tex( File.read('content.md')) %>
+\end{document}

@@ -1,0 +1,12 @@
+name: article
+description: >
+  This template helps you to write short articles 
+  with the beauty of LaTeX
+version: 0.1
+compilation:
+  template_files:
+    - document.tex.erb
+  static_files:
+project_files:
+  - content.md
+  - settings.yml
