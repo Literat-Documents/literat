@@ -1,19 +1,22 @@
 class Project < Hash
   ProjectFileName='.config.yml'
   ProjectPath='./'
-  TemplateType='article'
 
   def create(type)
+    # ensure project doesn't exist
     if self.project_exists?
       puts "ERROR".white.on_red + "Project already exists"
-      # TODO help user to fix this problem
       exit      
-    else
-      self[:template] = type
-      self[:created] = Time.now 
-      self.bootstrap_folder
-      self.write_config
     end
+    # ensure template exists
+    if !TemplateManager.new.exists? type
+      puts "ERROR".white.on_red + "Template does not exist"
+      exit  
+    end
+    self[:template] = type
+    self[:created] = Time.now 
+    self.bootstrap_folder
+    self.write_config
   end
 
   def project_exists?

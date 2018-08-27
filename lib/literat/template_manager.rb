@@ -26,4 +26,8 @@ class TemplateManager
   		self.init_template_directory
   	end
   end
+
+  def exists? name
+  	File.directory?("#{TemplateDirectory}/#{name}")
+  end
 end
