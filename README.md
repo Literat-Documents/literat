@@ -1,8 +1,8 @@
-# Liberat *this tool is still under heavy development - use at your own risk*
+# Literat *this tool is still under heavy development - use at your own risk*
 
 **Literat is a Framework and Tool for generating beautiful Documents.**
 
-## What's Liberat
+## What's Literat
 
 *to be done*
 
