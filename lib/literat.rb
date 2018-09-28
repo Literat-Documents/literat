@@ -63,12 +63,11 @@ Literat.define_command('list') do
 
   run do |opts, args, cmd|
   	template_manager = TemplateManager.new
+	puts 'TEMPLATES'.light_red.bold
+	puts
 	template_manager.list.each do |template|
-		puts 'TEMPLATES'.light_red.bold
-		puts
 		puts "\t#{template['name'].green}\t#{template['description']}"
-		puts
-		puts
 	end
+	puts
   end
 end
