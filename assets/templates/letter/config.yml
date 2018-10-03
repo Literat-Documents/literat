@@ -1,0 +1,21 @@
+---
+addressee:
+    company: Sample Company
+    attention: 
+    street: Sample Streat
+    nr: 1337
+    plz: 12345
+    city: Sample City
+title: Sampletitle
+opening: Dear Mr. Test
+closing: Sincerely
+sender:
+    name: John
+    lastname: Doe
+    street: My Street
+    nr: 42
+    plz: 23042
+    city: Test Town 
+    mail: John@doe-likes-pizza.de
+    web: doe-likes-pizza.de
+    phone: +12 345 6789042

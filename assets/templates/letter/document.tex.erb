@@ -1,0 +1,62 @@
+\documentclass[fontsize=11pt]{scrlttr2} 
+\usepackage{fontawesome} % icon font
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[T1]{fontenc}
+\usepackage{
+	ngerman,
+	raleway,
+	fontspec,
+    url,
+    tabularx,
+    multicol
+}
+\usepackage[utf8x]{inputenc}
+\linespread{1.25}
+\KOMAoptions{
+    paper=a4,
+    fromalign=center,
+    fromrule=aftername,
+    backaddress=true,
+    parskip=half,
+    enlargefirstpage=true
+} 
+\setkomavar{fromname}{
+    <%=config['sender']['name']%> <%=config['sender']['lastname']%>
+} 		
+\setkomavar{fromaddress}{
+    <%=config['sender']['street']%> <%=config['sender']['nr']%> \\
+    <%=config['sender']['plz']%> <%=config['sender']['city']%>
+} 
+\setkomavar{signature}{
+    <%=config['sender']['name']%> <%=config['sender']['lastname']%>
+}		
+\setkomavar{subject}{<%=config['title']%>}
+\setkomavar{place}{<%=config['sender']['city']%>} 	
+\let\raggedsignature=\raggedright		
+\begin{document}
+    \begin{letter}{
+        <%= config['addressee']['company']%> \\
+        <%=config['addressee']['attention']%> \\
+        <%=config['addressee']['street']%>  <%=config['addressee']['nr']%> \\
+        <%=config['addressee']['plz']%> <%=config['addressee']['city']%>
+    } 		
+    \firsthead{
+        \raggedleft
+        \vfill
+        \small
+        \vspace{2cm}
+        \begin{tabular}{@{}rl}
+            \faHome & <%=config['sender']['name']%> <%=config['sender']['lastname']%> \\
+                    & <%=config['sender']['street']%> <%=config['sender']['nr']%> \\
+                    & <%=config['sender']['plz']%> <%=config['sender']['city']%> \\
+            \faPhone& <%=config['sender']['phone']%> \\
+            \faEnvelope& <%=config['sender']['mail']%> \\
+            \faGlobe& <%=config['sender']['web']%> \\
+        \end{tabular}
+    }
+    \opening{<%=config['opening']%>}
+    <%= md_to_tex(File.read("./content.md")) %>
+    \vspace{1cm}
+    \closing{<%=config['closing']%>}
+    \end{letter}
+\end{document}

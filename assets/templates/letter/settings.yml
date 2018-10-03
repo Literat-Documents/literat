@@ -1,0 +1,9 @@
+title: Just a sample Article
+author:
+  name    : John
+  lastname: Doe   
+  org     : Sample Org
+  city    : MyCity
+  street  : Sample street
+  number  : 23
+  postal  : 133742

@@ -1,0 +1,11 @@
+name: letter
+description: >
+This template helps you to write simple letters with the beauty of LaTeX
+version: 0.1
+compilation:
+  template_files:
+    - document.tex.erb
+  static_files:
+project_files:
+  - content.md
+  - config.yml
