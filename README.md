@@ -10,10 +10,10 @@
 
 - [x] create the tool
 - [ ] make tool stable by adding some checks
-- [ ] implementing automatic creation of template folder
+- [X] implementing automatic creation of template folder
 - [ ] add more templates
   - [ ] create templates
-  - [ ] implement template managing features
+  - [o] implement template managing features
 
 ## Getting Started
 ### Preparation
