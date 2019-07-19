@@ -8,5 +8,9 @@ Gem::Specification.new do |s|
   s.files       = `git ls-files`.split("\n")
   s.executables << 'literat'
   s.license     = 'GPL-3.0'
+  s.add_runtime_dependency "cri"
+  s.add_runtime_dependency "kramdown"
+  s.add_runtime_dependency "git"
+  s.add_runtime_dependency "colorize"
 end
 
