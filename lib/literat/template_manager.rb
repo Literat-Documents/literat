@@ -7,7 +7,7 @@ class TemplateManager
   TemplateConfigFile='template.yml'
 
   def list
-  	Dir.entries(TemplateDirectory)[2..-1].map do |folder|  
+    (Dir.entries(TemplateDirectory) - ['..', '.']).map do |folder|  
   	  template = Template.new folder
   	  template.config
   	end
